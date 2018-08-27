@@ -3,7 +3,10 @@
     "description": "A Laravel Nova indicator field.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "field",
+        "status",
+        "indicator"
     ],
     "license": "MIT",
     "require": {
