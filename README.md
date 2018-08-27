@@ -100,7 +100,7 @@ If a colour is not specified for a status, it will be displayed as grey.
 
 ## Appearance
 
-The field is displayed similarly to the built-in `Laravel\Nova\Fields\Boolean` field, with the ability to have more than two values, and different labels and colours defined.
+The field is displayed similarly to the built-in `Laravel\Nova\Fields\Boolean` field, with the ability to have more than a true/false value, and different labels and colours defined.
 
 ### Index
 ![index-field](https://raw.githubusercontent.com/inspheric/nova-indicator-field/master/docs/index-field.png)
