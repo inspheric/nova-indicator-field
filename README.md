@@ -32,6 +32,7 @@ Indicator::make('Status')
     ->labels([
         'banned' => 'Banned',
         'active' => 'Active',
+        'invited' => 'Invited',
         'inactive' => 'Inactive',
     ])
 ```
@@ -75,6 +76,7 @@ Indicator::make('Status')
     ->colors([
         'banned' => 'red',
         'active' => 'green',
+        'invited' => 'blue',
         'inactive' => 'grey',
     ])
 ```
