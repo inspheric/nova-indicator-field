@@ -6,6 +6,21 @@ use Laravel\Nova\Fields\Field;
 
 class Indicator extends Field
 {
+
+    /**
+     * Indicates if the element should be shown on the creation view.
+     *
+     * @var bool
+     */
+    public $showOnCreation = false;
+
+    /**
+     * Indicates if the element should be shown on the update view.
+     *
+     * @var bool
+     */
+    public $showOnUpdate = false;
+
     /**
      * The field's component.
      *
@@ -14,14 +29,25 @@ class Indicator extends Field
     public $component = 'indicator';
 
     /**
-     * Specify the values and classes that should be displayed.
+     * Specify the labels that should be displayed.
      *
-     * @param  array  $statuses
+     * @param  array  $labels
      * @return $this
      */
-    public function statuses(array $statuses)
+    public function labels(array $labels)
     {
-        return $this->withMeta(['statuses' => $statuses]);
+        return $this->withMeta(['labels' => $labels, 'withoutLabels' => false]);
+    }
+
+    /**
+     * Specify the colours that should be displayed.
+     *
+     * @param  array  $colors
+     * @return $this
+     */
+    public function colors(array $colors)
+    {
+        return $this->withMeta(['colors' => $colors]);
     }
 
     /**
@@ -33,5 +59,15 @@ class Indicator extends Field
     public function unknown(string $label)
     {
         return $this->withMeta(['unknownLabel' => $label]);
+    }
+
+    /**
+     * Display the raw value instead of a label.
+     *
+     * @return $this
+     */
+    public function withoutLabels()
+    {
+        return $this->withMeta(['withoutLabels' => true]);
     }
 }

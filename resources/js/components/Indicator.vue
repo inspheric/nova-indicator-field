@@ -7,7 +7,7 @@
         <span v-if="labelText">
             {{ labelText }}
         </span>
-        <span v-else>{{ field.unknownLabel ? field.unknownLabel : '&mdash;' }}</span>
+        <span v-else>{{ field.unknownLabel && !field.withoutLabels ? field.unknownLabel : '&mdash;' }}</span>
     </span>
 </template>
 
@@ -17,15 +17,18 @@ export default {
 
     computed: {
         labelText() {
-            if (this.field.statuses.hasOwnProperty(this.field.value)) {
-                return this.field.statuses[this.field.value].label;
+            if (this.field.withoutLabels) {
+                return this.field.value;
+            }
+            else if (this.field.labels.hasOwnProperty(this.field.value)) {
+                return this.field.labels[this.field.value];
             }
         },
         colorClass() {
             let color = 'grey';
 
-            if (this.field.statuses.hasOwnProperty(this.field.value)) {
-                color = this.field.statuses[this.field.value].color;
+            if (this.field.colors.hasOwnProperty(this.field.value)) {
+                color = this.field.colors[this.field.value];
             }
 
             return `indicator-${color}`;
