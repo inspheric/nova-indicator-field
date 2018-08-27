@@ -26,7 +26,7 @@ class Indicator extends Field
      *
      * @var string
      */
-    public $component = 'indicator';
+    public $component = 'indicator-field';
 
     /**
      * Specify the labels that should be displayed.
