@@ -7,7 +7,8 @@
         <span v-if="labelText">
             {{ labelText }}
         </span>
-        <span v-else>{{ field.unknownLabel && !field.withoutLabels ? field.unknownLabel : '&mdash;' }}</span>
+        <span v-else-if="field.unknownLabel && !field.withoutLabels">{{ field.unknownLabel }}</span>
+        <span v-else>&mdash;</span>
     </span>
 </template>
 
@@ -20,14 +21,14 @@ export default {
             if (this.field.withoutLabels) {
                 return this.field.value;
             }
-            else if (this.field.labels.hasOwnProperty(this.field.value)) {
+            else if (this.field.labels && this.field.labels.hasOwnProperty(this.field.value)) {
                 return this.field.labels[this.field.value];
             }
         },
         colorClass() {
             let color = 'grey';
 
-            if (this.field.colors.hasOwnProperty(this.field.value)) {
+            if (this.field.colors && this.field.colors.hasOwnProperty(this.field.value)) {
                 color = this.field.colors[this.field.value];
             }
 
