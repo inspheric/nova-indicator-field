@@ -92,7 +92,7 @@ This is useful if you only want to highlight particular values in the grid and h
 
 #### Should Hide If No
 
-The indicator can be hidden if the field value is anything that PHP considers as falsy, i.e. false, 0, null or '':
+The indicator can be hidden if the field value is anything that PHP considers as falsy, i.e. `false`, `0`, `null` or `''`:
 
 ```php
 Indicator::make('Status')
@@ -121,7 +121,7 @@ The array key is the raw field value and the array value is the desired colour.
 If a colour is not specified for a status, it will be displayed as grey.
 
 The available colours are the default "base" colours from [Tailwind](https://tailwindcss.com/docs/colors), with the addition of black:
-- black (#22292F)
+- black (#22292F) 
 - grey or gray (#B8C2CC)
 - red (#E3342F)
 - orange (#F6993F)
