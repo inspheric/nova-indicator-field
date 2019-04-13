@@ -1,7 +1,7 @@
 <template>
     <span v-if="!field.shouldHide">
         <span
-            class="inline-block indicator-dot indicator-grey rounded-full w-2 h-2 mr-1"
+            class="inline-block indicator-grey rounded-full w-2 h-2 mr-1"
             v-bind="colorClassStyle"
         />
         <span v-if="labelText">
@@ -32,7 +32,7 @@ export default {
                 color = this.field.colors[this.field.value]
             }
 
-            if (/^(?:#|(?:rgb|hsl)a?\()/.test(color)) {
+            if (/^(?:#|var\(--|(?:rgb|hsl)a?\()/.test(color)) {
                 return {
                     style: `background:${color};`
                 }

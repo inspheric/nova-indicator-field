@@ -1,12 +1,28 @@
 // Nova Indicator Field CSS
 
-.indicator-black {
-    background: #22292F;
-}
-
 .indicator-gray,
 .indicator-grey {
     background: #B8C2CC;
+}
+
+.indicator-info {
+    background-color: var(--info);
+}
+
+.indicator-danger {
+    background-color: var(--danger);
+}
+
+.indicator-warning {
+    background-color: var(--warning);
+}
+
+.indicator-success {
+    background-color: var(--success);
+}
+
+.indicator-black {
+    background: #22292F;
 }
 
 .indicator-red {

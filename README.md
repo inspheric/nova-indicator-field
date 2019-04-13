@@ -102,7 +102,7 @@ Indicator::make('Status')
 This is a shortcut for a common scenario for the above `shouldHide()` method.
 
 #### Colours
-##### Colour Classes
+##### Named Colours
 
 Add your desired status colours:
 
@@ -121,23 +121,30 @@ The array key is the raw field value and the array value is the desired colour.
 If a colour is not specified for a status, it will be displayed as grey.
 
 The available colours are the default "base" colours from [Tailwind](https://tailwindcss.com/docs/colors), with the addition of black:
-- black (#22292F) 
-- grey or gray (#B8C2CC)
-- red (#E3342F)
-- orange (#F6993F)
-- yellow (#FFED4A)
-- green (#38C172)
-- teal (#4DC0B5)
-- blue (#3490DC)
-- indigo (#6574CD)
-- purple (#9561E2)
-- pink (#F66D9B)
+* 'black'   `#22292F`
+* 'grey' or 'gray' `#B8C2CC`
+* 'red'     `#E3342F`
+* 'orange'  `#F6993F`
+* 'yellow'  `#FFED4A`
+* 'green'   `#38C172`
+* 'teal'    `#4DC0B5`
+* 'blue'    `#3490DC`
+* 'indigo'  `#6574CD`
+* 'purple'  `#9561E2`
+* 'pink'    `#F66D9B`
 
-Colour classes are not validated against the list above, so if you enter an invalid colour, it will fall back to grey.
+As well as the following Nova variable colours:
+
+* 'success' `var(--success)`
+* 'warning' `var(--warning)`
+* 'danger'  `var(--danger)`
+* 'info'    `var(--info)`
+
+Colour classes are not validated against the lists above, so if you enter an invalid colour, it will fall back to grey.
 
 ##### Literal Colours
 
-You can also use your own hexadecimal, RGB/RGBA or HSL/HSLA colours as in CSS:
+You can also use your own hexadecimal, RGB/RGBA or HSL/HSLA literal colours or variables, as in CSS:
 
 ```php
 Indicator::make('Status')
@@ -147,6 +154,7 @@ Indicator::make('Status')
         '...' => 'rgba(0, 0, 0, 0.5)',
         '...' => 'hsl(120, 100%, 50%)',
         '...' => 'hsla(120, 100%, 50%, 0.5)',
+        '...' => 'var(--success)',
     ])
 ```
 
