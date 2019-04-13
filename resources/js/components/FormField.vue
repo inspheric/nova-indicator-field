@@ -15,12 +15,6 @@ export default {
 
     components: {
         'indicator-field': Indicator
-    },
-
-    methods: {
-        setInitialValue() {},
-        fill(formData) {},
-        handleChange(value) {}
     }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
-    <span>
+    <span v-if="!field.shouldHide">
         <span
-            class="inline-block rounded-full w-2 h-2 mr-1"
-            :class="colorClass"
+            class="inline-block indicator-dot indicator-grey rounded-full w-2 h-2 mr-1"
+            v-bind="colorClassStyle"
         />
         <span v-if="labelText">
             {{ labelText }}
@@ -19,20 +19,28 @@ export default {
     computed: {
         labelText() {
             if (this.field.withoutLabels) {
-                return this.field.value;
+                return this.field.value
             }
             else if (this.field.labels && this.field.labels.hasOwnProperty(this.field.value)) {
-                return this.field.labels[this.field.value];
+                return this.field.labels[this.field.value]
             }
         },
-        colorClass() {
-            let color = 'grey';
+        colorClassStyle() {
+            let color = 'grey'
 
             if (this.field.colors && this.field.colors.hasOwnProperty(this.field.value)) {
-                color = this.field.colors[this.field.value];
+                color = this.field.colors[this.field.value]
             }
 
-            return `indicator-${color}`;
+            if (/^(?:#|(?:rgb|hsl)a?\()/.test(color)) {
+                return {
+                    style: `background:${color};`
+                }
+            }
+
+            return {
+                class: `indicator-${color}`
+            }
         }
     }
 }
