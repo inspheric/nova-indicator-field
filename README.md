@@ -198,4 +198,4 @@ If you do need an editable status field, you might want to add your own addition
 
 ## Donate
 
-:purple_heart: If you like this package, you can show your appreciation by [donating any amount via PayPal](https://burtonsenior.com/donate/inspheric/nova-defaultable) to support ongoing development.
+:purple_heart: If you like this package, you can show your appreciation by [donating any amount via PayPal](https://burtonsenior.com/donate/inspheric/nova-indicator-field) to support ongoing development.
