@@ -1,5 +1,5 @@
 <template>
-    <indicator-field :field="field"></indicator-field>
+    <Indicator :field="field"></Indicator>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     props: ['resourceName', 'field'],
 
     components: {
-        'indicator-field': Indicator
+        Indicator
     }
 }
 </script>
