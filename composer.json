@@ -4,13 +4,15 @@
     "keywords": [
         "laravel",
         "nova",
+        "nova-4",
         "field",
         "status",
         "indicator"
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": "^8.0",
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {

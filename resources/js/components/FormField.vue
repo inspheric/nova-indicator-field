@@ -1,9 +1,9 @@
 <template>
-    <default-field :field="field">
-        <template slot="field">
-            <indicator-field :field="field"></indicator-field>
+    <DefaultField :field="field">
+        <template #field>
+            <Indicator :field="field"></Indicator>
         </template>
-    </default-field>
+    </DefaultField>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
     mixins: [FormField],
 
     components: {
-        'indicator-field': Indicator
+        Indicator
     }
 }
 </script>

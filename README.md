@@ -192,6 +192,6 @@ The field is displayed similarly to the built-in `Laravel\Nova\Fields\Boolean` f
 ### Form
 (Same as detail.)
 
-The indicator is not displayed on forms by default. If you choose to display it as a form field with `showOnUpdate()`, the indicator is not editable and does not write back to the server, as it is intended to come from a read-only or derived model attribute.
+The indicator is not displayed on forms by default. If you choose to display it as a form field with `showOnUpdating()`, the indicator is not editable and does not write back to the server, as it is intended to come from a read-only or derived model attribute.
 
 If you do need an editable status field, you might want to add your own additional `Laravel\Nova\Fields\Select` field to your resource, referencing the same attribute name, and with `onlyOnForms()` set.
